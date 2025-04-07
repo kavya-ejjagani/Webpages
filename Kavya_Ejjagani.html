@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Kavya Ejjagani</title>
+
+  <!-- Handwritten font -->
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+  <style>
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatStars {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-100vh); opacity: 0; }
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f3e8ff, #e8d7ff);
+      color: #4b3869;
+      overflow-x: hidden;
+    }
+
+    .star {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.6;
+      animation: floatStars linear infinite;
+    }
+
+    .stars-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #ede2ff;
+      animation: fadeIn 1s ease-in-out;
+      box-shadow: 0 4px 12px rgba(155, 89, 182, 0.1);
+      z-index: 1;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: 'Sacramento', cursive;
+      font-size: 3.5rem;
+      color: #6a4c93;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    header p {
+      margin: 1rem 0 0;
+      font-size: 1.2rem;
+      color: #7e5ca4;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-top: 1.5rem;
+      border: 4px solid #bfa2db;
+      box-shadow: 0 0 10px rgba(106, 76, 147, 0.3);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6a4c93;
+      font-weight: bold;
+      padding: 0.6rem 1.5rem;
+      border: 2px solid #bfa2db;
+      border-radius: 10px;
+      background: #f8f0ff;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    nav a:hover {
+      background: #d6c6f7;
+      transform: scale(1.08);
+      color: #fff;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffffcc;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(155, 89, 182, 0.2);
+      animation: fadeIn 1.5s ease-in-out;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      color: #6a4c93;
+      border-bottom: 2px solid #d6c6f7;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0.6rem 0;
+    }
+
+    strong {
+      color: #7e5ca4;
+    }
+
+    a {
+      color: #6a4c93;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #ede2ff;
+      color: #7e5ca4;
+      margin-top: 2rem;
+      animation: fadeIn 2s ease-in-out;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating stars background -->
+  <div class="stars-container">
+    <script>
+      const starsContainer = document.querySelector('.stars-container');
+      for (let i = 0; i < 60; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.animationDuration = `${5 + Math.random() * 10}s`;
+        star.style.background = `rgba(255,255,255,${Math.random()})`;
+        starsContainer.appendChild(star);
+      }
+    </script>
+  </div>
+
+  <header>
+    <h1>Kavya Ejjagani</h1>
+    <p>Business Analyst | Data Enthusiast | Sustainability Advocate</p>
+    <img src="C:\Users\harsh\Downloads\WhatsApp Image 2025-04-06 at 21.04.57_6ca35b13.jpg" alt="Kavya Ejjagani">
+  </header>
+
+  <nav>
+    <a href="https://www.linkedin.com/in/kavya-ejjagani" target="_blank">LinkedIn</a>
+    <a href="C:\Users\harsh\Downloads\Kavya Ejjagani_resume_ATS.pdf" target="_blank">Resume</a>
+  </nav>
+
+  <main>
+    <h2>About Me</h2>
+    <p>Hi! I'm Kavya — a results-driven Business Analyst with 4+ years of experience in Retail, Supply Chain, and Sustainability. I love transforming complex data into meaningful insights that make businesses thrive. I’m all about dashboards, clean code, and creative problem solving.</p>
+
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Data & Visualization:</strong> Python (NumPy, Pandas), SQL, R, Tableau, Power BI</li>
+      <li><strong>Cloud & Integration:</strong> Snowflake, Dell Boomi, MuleSoft, Databricks</li>
+      <li><strong>Tools:</strong> Azure Board, ServiceNow, SharePoint, Slack, SmartSheets</li>
+      <li><strong>Office Suite:</strong> Excel (VBA, Pivot Tables), Word, Project</li>
+      <li><strong>Methodologies:</strong> Agile, Waterfall, SDLC</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Air Quality Prediction in Ancona:</strong> Used ML models to forecast air quality. Random Forest offered the best accuracy.</li>
+      <li><strong>COVID-19 Visualization:</strong> Created dashboards in Tableau and Power BI showing global trends and vaccination impact.</li>
+    </ul>
+
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Nike – Operations Analyst</strong> (Oct 2024 – Present): Created dashboards and data pipelines to support supply chain decisions.</li>
+      <li><strong>Cepoch LLC – Business Analyst</strong> (Aug 2023 – May 2024): Managed KPI improvements and collaborated on ATS product enhancements.</li>
+      <li><strong>Capgemini – Sr. Analyst</strong> (Sep 2020 – Aug 2022): Led cloud integrations and automation improvements for HRIS and procurement.</li>
+    </ul>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>Dell Boomi (Professional & Associate)</li>
+      <li>MuleSoft Certified Developer</li>
+      <li>Azure Fundamentals – Microsoft</li>
+      <li>Agile Software Development – Coursera</li>
+      <li>Climate & Sustainability – BCG</li>
+      <li>GIS & Spatial Analytics – ESRI</li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+      <li><strong>MS in Business Analytics</strong>, University of New Haven – Dec 2023</li>
+      <li><strong>B.Tech in CSE</strong>, Institute of Aeronautical Engineering – Aug 2020</li>
+    </ul>
+
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:kavyae509@gmail.com">kavyae509@gmail.com</a></p>
+    <p>Location: Beaverton, OR | Phone: 475-655-6968</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kavya Ejjagani. Designed with elegance and purpose.</p>
+  </footer>
+</body>
+</html>
